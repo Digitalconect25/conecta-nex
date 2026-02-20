@@ -1,21 +1,24 @@
 import React from 'react';
-import { articles } from './data'; // Assume this imports marketing articles and industry insights
 
-const BlogListingPage = () => {
-    return (
-        <div>
-            <h1>Blog Listing</h1>
-            <ul>
-                {articles.map((article, index) => (
-                    <li key={index}>
-                        <h2>{article.title}</h2>
-                        <p>{article.summary}</p>
-                        <a href={article.link}>Read more</a>
-                    </li>
-                ))}
-            </ul>
-        </div>
-    );
+const BlogPage = () => {
+  return (
+    <div>
+      <h1>Marketing Tips</h1>
+      <ul>
+        <li>Tip 1: Understand your audience.</li>
+        <li>Tip 2: Use social media effectively.</li>
+        <li>Tip 3: Create engaging content.</li>
+        <li>Tip 4: Monitor your analytics.</li>
+        <li>Tip 5: Test and optimize your campaigns.</li>
+      </ul>
+      <h2>Subscribe to our Newsletter</h2>
+      <form>
+        <label htmlFor="email">Email:</label>
+        <input type="email" id="email" name="email" required />
+        <button type="submit">Subscribe</button>
+      </form>
+    </div>
+  );
 };
 
-export default BlogListingPage;
+export default BlogPage;
